@@ -18,6 +18,10 @@ body {
   margin: 50px auto;
 }
 
+header {
+  position: relative;
+}
+
 header .logo{
   font-weight: 600;
   font-size: 20px;
@@ -40,7 +44,83 @@ header ul.nav li:hover {
   opacity: 0.5;
 }
 
+header .shop-cart-btn {
+  float: right;
+  cursor: pointer;
+  transition: color, transform 500ms ease;
+}
+
+header .shop-cart-btn:hover, .shop-cart-btn.active {
+  color: #ca5252;
+  transform: scale(1.2);
+}
+
+header .shop-cart {
+  z-index: 2;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 450px;
+  background-color: #fafafa;
+  -webkit-box-shadow: -6px 6px 20px 2px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: -6px 6px 20px 2px rgba(34, 60, 80, 0.2);
+  box-shadow: -6px 6px 20px 2px rgba(34, 60, 80, 0.2);
+  padding: 16px;
+  padding-bottom: 0;
+}
+
+header .shop-cart .empty h2{
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+header .shop-cart .item {
+  width: 100%;
+  float: left;
+  margin-bottom: 16px;
+}
+
+header .shop-cart .item img {
+  width: 70px;
+  float: left;
+  margin-right: 20px;
+}
+
+header .shop-cart .item h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+header .shop-cart .item p {
+  color: #797979;
+  font-weight: 600;
+}
+
+header .shop-cart .item .delete-icon {
+  cursor: pointer;
+  transition: color, transform 500ms ease;
+  color: #ca5252;
+  position: relative;
+  float: right;
+  top: -25px;
+}
+
+header .shop-cart .item .delete-icon:hover {
+  color: #dc3d3d;
+  transform: scale(1.2);
+}
+
+header .shop-cart .summa {
+  float: left;
+  width: 100%;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
 header .presentation {
+  z-index: 1;
   margin: 50px 0;
   background: url('./assets/bg.jpg') no-repeat;
   width: 100%;
